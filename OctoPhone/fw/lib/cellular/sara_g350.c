@@ -12,6 +12,7 @@
 #include <ti/drivers/UART.h>
 
 #include <string.h>
+#include <stdlib.h>
 
 #include "sara_g350.h"
 #include "at_serial.h"
@@ -59,8 +60,23 @@ int sara_g350_send_sms(char* number, char* buffer){
 		return CELLULAR_RETURN_BUSY;
 	sara_g350_locked = 1;
 
+	if(number == NULL || buffer == NULL)
+		return CELLULAR_RETURN_BAD_ARGUMENTS;
+
+	//allocate memory
+	char* local_buffer = (char*)malloc(sizeof(char)*(strlen(buffer)+12+strlen(number)));
+	if(local_buffer == NULL)
+		return CELLULAR_RETURN_ERROR_MEMORY;
+
 	at_serial_send_command(atserial, "AT+CMGF=1", "", NULL, 0, 0);
-	at_serial_send_command(atserial, "AT+CMGS=\"NUMBER\"\rMESSAGE(BUFFER)<Ctrl-Z>", "+CMGS:", &send_result, 1, 300);
+	strcpy(local_buffer, "AT+CMGS=\"");
+	strcat(local_buffer, number);
+	strcat(local_buffer, "\"\r");
+	strcat(local_buffer, buffer);
+	strcat(local_buffer, "\032"); //<Ctrl-Z>
+	at_serial_send_command(atserial, local_buffer, "+CMGS:", &send_result, 1, 300);
+
+	free(local_buffer);
 
 	sara_g350_locked = 0;
 	return 0;

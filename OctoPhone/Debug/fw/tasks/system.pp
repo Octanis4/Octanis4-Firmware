@@ -126,8 +126,8 @@ fw/tasks/system.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/pac
 fw/tasks/system.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/knl/Task__epilogue.h
 fw/tasks/system.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/knl/package/Task_SupportProxy.h
 fw/tasks/system.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers_msp43x_2_16_01_13/packages/ti/drivers/GPIO.h
-fw/tasks/system.obj: C:/Users/beat/Documents/octanis/Phone/OctoPhone/Board.h
-fw/tasks/system.obj: C:/Users/beat/Documents/octanis/Phone/OctoPhone/MSP_EXP432P401R.h
+fw/tasks/system.obj: C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/Board.h
+fw/tasks/system.obj: C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/MSP_EXP432P401R.h
 
 ../fw/tasks/system.c: 
 C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/knl/Task.h: 
@@ -255,5 +255,5 @@ C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/inte
 C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/knl/Task__epilogue.h: 
 C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
 C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers_msp43x_2_16_01_13/packages/ti/drivers/GPIO.h: 
-C:/Users/beat/Documents/octanis/Phone/OctoPhone/Board.h: 
-C:/Users/beat/Documents/octanis/Phone/OctoPhone/MSP_EXP432P401R.h: 
+C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/Board.h: 
+C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/MSP_EXP432P401R.h: 

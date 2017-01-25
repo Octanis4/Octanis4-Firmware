@@ -132,6 +132,7 @@ fw/lib/cellular/sara_g350.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers
 fw/lib/cellular/sara_g350.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stddef.h
 fw/lib/cellular/sara_g350.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/string.h
 fw/lib/cellular/sara_g350.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h
+fw/lib/cellular/sara_g350.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdlib.h
 fw/lib/cellular/sara_g350.obj: ../fw/lib/cellular/sara_g350.h
 fw/lib/cellular/sara_g350.obj: ../fw/lib/cellular/cellular.h
 fw/lib/cellular/sara_g350.obj: ../fw/lib/cellular/sara_g350.h
@@ -270,6 +271,7 @@ C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers_msp43x_2_16_01_13/packages/ti/
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stddef.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/string.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/linkage.h: 
+C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stdlib.h: 
 ../fw/lib/cellular/sara_g350.h: 
 ../fw/lib/cellular/cellular.h: 
 ../fw/lib/cellular/sara_g350.h: 

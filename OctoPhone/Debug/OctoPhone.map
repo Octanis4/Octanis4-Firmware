@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v5.2.7                      
 ******************************************************************************
->> Linked Sat Jan 14 20:03:18 2017
+>> Linked Wed Jan 25 22:45:28 2017
 
 OUTPUT FILE NAME:   <OctoPhone.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00003b31
@@ -588,8 +588,8 @@ section   page    origin      length       input sections
 *          0    00000000    00000008     DSECT
                   00000000    00000008     boot.aem4f : boot.oem4f (.bootVecs)
 
-xdc.meta   0    00000000    000000ea     COPY SECTION
-                  00000000    000000ea     empty_pem4f.oem4f (xdc.meta)
+xdc.meta   0    00000000    000000f6     COPY SECTION
+                  00000000    000000f6     empty_pem4f.oem4f (xdc.meta)
 
 
 LINKER GENERATED COPY TABLES
@@ -688,11 +688,11 @@ UNDEFED   SHT$$INIT_ARRAY$$Limit
 000054fd  WDT_A_startTimer                                            
 00000000  __ASM__                                                     
 20000a80  __CIOBUF_                                                   
-00000066  __ISA__                                                     
-00000079  __PLAT__                                                    
+00000072  __ISA__                                                     
+00000085  __PLAT__                                                    
 20010000  __STACK_END                                                 
 00000300  __STACK_SIZE                                                
-0000009c  __TARG__                                                    
+000000a8  __TARG__                                                    
 00007998  __TI_CINIT_Base                                             
 000079b0  __TI_CINIT_Limit                                            
 0000797c  __TI_Handler_Table_Base                                     
@@ -706,7 +706,7 @@ UNDEFED   SHT$$INIT_ARRAY$$Limit
 00007558  __TI_static_base__                                          
 00003701  __TI_writemsg                                               
 0000576d  __TI_zero_init                                              
-000000c2  __TRDR__                                                    
+000000ce  __TRDR__                                                    
 000033fb  __aeabi_idiv0                                               
 00003381  __aeabi_memclr                                              
 00003381  __aeabi_memclr4                                             
@@ -1194,10 +1194,10 @@ address   name
 00000001  xdc_runtime_Startup__EXECFXN__C                             
 00000001  xdc_runtime_Startup__RESETFXN__C                            
 00000041  ti_sysbios_family_arm_m3_Hwi_excDumpRegs__I                 
-00000066  __ISA__                                                     
-00000079  __PLAT__                                                    
-0000009c  __TARG__                                                    
-000000c2  __TRDR__                                                    
+00000072  __ISA__                                                     
+00000085  __PLAT__                                                    
+000000a8  __TARG__                                                    
+000000ce  __TRDR__                                                    
 00000300  __STACK_SIZE                                                
 00000471  xdc_runtime_System_doPrint__I                               
 000007bd  HOSTwrite                                                   

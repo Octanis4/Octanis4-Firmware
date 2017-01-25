@@ -159,8 +159,8 @@ fw/main.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti
 fw/main.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers_msp43x_2_16_01_13/packages/ti/drivers/GPIO.h
 fw/main.obj: C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers_msp43x_2_16_01_13/packages/ti/drivers/UART.h
 fw/main.obj: C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stddef.h
-fw/main.obj: C:/Users/beat/Documents/octanis/Phone/OctoPhone/Board.h
-fw/main.obj: C:/Users/beat/Documents/octanis/Phone/OctoPhone/MSP_EXP432P401R.h
+fw/main.obj: C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/Board.h
+fw/main.obj: C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/MSP_EXP432P401R.h
 
 ../fw/main.c: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/std.h: 
@@ -321,5 +321,5 @@ C:/ti/tirtos_msp43x_2_16_01_14/products/bios_6_45_02_31/packages/ti/sysbios/knl/
 C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers_msp43x_2_16_01_13/packages/ti/drivers/GPIO.h: 
 C:/ti/tirtos_msp43x_2_16_01_14/products/tidrivers_msp43x_2_16_01_13/packages/ti/drivers/UART.h: 
 C:/ti/ccsv6/tools/compiler/ti-cgt-arm_5.2.7/include/stddef.h: 
-C:/Users/beat/Documents/octanis/Phone/OctoPhone/Board.h: 
-C:/Users/beat/Documents/octanis/Phone/OctoPhone/MSP_EXP432P401R.h: 
+C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/Board.h: 
+C:/Users/beat/Documents/octanis/Octanis4-Firmware/OctoPhone/MSP_EXP432P401R.h: 
