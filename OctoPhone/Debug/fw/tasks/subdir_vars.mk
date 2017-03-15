@@ -4,51 +4,39 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../fw/tasks/call.c \
-../fw/tasks/mail.c \
-../fw/tasks/menu.c \
-../fw/tasks/phonebook.c \
-../fw/tasks/sms.c \
-../fw/tasks/system.c 
+../fw/tasks/cellular_task.c \
+../fw/tasks/display_task.c \
+../fw/tasks/keyboard_task.c \
+../fw/tasks/system_task.c 
 
 OBJS += \
-./fw/tasks/call.obj \
-./fw/tasks/mail.obj \
-./fw/tasks/menu.obj \
-./fw/tasks/phonebook.obj \
-./fw/tasks/sms.obj \
-./fw/tasks/system.obj 
+./fw/tasks/cellular_task.obj \
+./fw/tasks/display_task.obj \
+./fw/tasks/keyboard_task.obj \
+./fw/tasks/system_task.obj 
 
 C_DEPS += \
-./fw/tasks/call.pp \
-./fw/tasks/mail.pp \
-./fw/tasks/menu.pp \
-./fw/tasks/phonebook.pp \
-./fw/tasks/sms.pp \
-./fw/tasks/system.pp 
+./fw/tasks/cellular_task.pp \
+./fw/tasks/display_task.pp \
+./fw/tasks/keyboard_task.pp \
+./fw/tasks/system_task.pp 
 
 C_DEPS__QUOTED += \
-"fw\tasks\call.pp" \
-"fw\tasks\mail.pp" \
-"fw\tasks\menu.pp" \
-"fw\tasks\phonebook.pp" \
-"fw\tasks\sms.pp" \
-"fw\tasks\system.pp" 
+"fw\tasks\cellular_task.pp" \
+"fw\tasks\display_task.pp" \
+"fw\tasks\keyboard_task.pp" \
+"fw\tasks\system_task.pp" 
 
 OBJS__QUOTED += \
-"fw\tasks\call.obj" \
-"fw\tasks\mail.obj" \
-"fw\tasks\menu.obj" \
-"fw\tasks\phonebook.obj" \
-"fw\tasks\sms.obj" \
-"fw\tasks\system.obj" 
+"fw\tasks\cellular_task.obj" \
+"fw\tasks\display_task.obj" \
+"fw\tasks\keyboard_task.obj" \
+"fw\tasks\system_task.obj" 
 
 C_SRCS__QUOTED += \
-"../fw/tasks/call.c" \
-"../fw/tasks/mail.c" \
-"../fw/tasks/menu.c" \
-"../fw/tasks/phonebook.c" \
-"../fw/tasks/sms.c" \
-"../fw/tasks/system.c" 
+"../fw/tasks/cellular_task.c" \
+"../fw/tasks/display_task.c" \
+"../fw/tasks/keyboard_task.c" \
+"../fw/tasks/system_task.c" 
 
 

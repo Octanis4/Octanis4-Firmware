@@ -11,12 +11,10 @@ GEN_CMDS__FLAG := -l"configPkg/linker.cmd"
 
 ORDERED_OBJS += \
 "./MSP_EXP432P401R.obj" \
-"./fw/tasks/call.obj" \
-"./fw/tasks/mail.obj" \
-"./fw/tasks/menu.obj" \
-"./fw/tasks/phonebook.obj" \
-"./fw/tasks/sms.obj" \
-"./fw/tasks/system.obj" \
+"./fw/tasks/cellular_task.obj" \
+"./fw/tasks/display_task.obj" \
+"./fw/tasks/keyboard_task.obj" \
+"./fw/tasks/system_task.obj" \
 "./fw/main.obj" \
 "./fw/lib/cellular/at_serial.obj" \
 "./fw/lib/cellular/cellular.obj" \
@@ -168,8 +166,8 @@ OctoPhone.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_MISC_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)$(GEN_CMDS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "MSP_EXP432P401R.pp" "fw\tasks\call.pp" "fw\tasks\mail.pp" "fw\tasks\menu.pp" "fw\tasks\phonebook.pp" "fw\tasks\sms.pp" "fw\tasks\system.pp" "fw\main.pp" "fw\lib\cellular\at_serial.pp" "fw\lib\cellular\cellular.pp" "fw\lib\cellular\sara_g350.pp" "fw\lib\cellular\sim800.pp" 
-	-$(RM) "MSP_EXP432P401R.obj" "fw\tasks\call.obj" "fw\tasks\mail.obj" "fw\tasks\menu.obj" "fw\tasks\phonebook.obj" "fw\tasks\sms.obj" "fw\tasks\system.obj" "fw\main.obj" "fw\lib\cellular\at_serial.obj" "fw\lib\cellular\cellular.obj" "fw\lib\cellular\sara_g350.obj" "fw\lib\cellular\sim800.obj" 
+	-$(RM) "MSP_EXP432P401R.pp" "fw\tasks\cellular_task.pp" "fw\tasks\display_task.pp" "fw\tasks\keyboard_task.pp" "fw\tasks\system_task.pp" "fw\main.pp" "fw\lib\cellular\at_serial.pp" "fw\lib\cellular\cellular.pp" "fw\lib\cellular\sara_g350.pp" "fw\lib\cellular\sim800.pp" 
+	-$(RM) "MSP_EXP432P401R.obj" "fw\tasks\cellular_task.obj" "fw\tasks\display_task.obj" "fw\tasks\keyboard_task.obj" "fw\tasks\system_task.obj" "fw\main.obj" "fw\lib\cellular\at_serial.obj" "fw\lib\cellular\cellular.obj" "fw\lib\cellular\sara_g350.obj" "fw\lib\cellular\sim800.obj" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

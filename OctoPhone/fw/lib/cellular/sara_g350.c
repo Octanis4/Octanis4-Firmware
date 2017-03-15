@@ -45,6 +45,7 @@ int sara_g350_read_sms(int index, char* buffer){
 		return CELLULAR_RETURN_BUSY;
 	sara_g350_locked = 1;
 
+	at_serial_send_command(atserial, "AT+CMGF=1", "", NULL, 0, 0);
 //AT+CMGR (text mode)
 
 	sara_g350_locked = 0;
@@ -52,8 +53,9 @@ int sara_g350_read_sms(int index, char* buffer){
 }
 
 int sara_g350_send_sms(char* number, char* buffer){
-	//make sure no one else is using
-	int16_t send_result;
+	//make sure no one else is using and device ready
+	int16_t index;
+	int return_result;
 	if(atserial == NULL || atserial->state != AT_SERIAL_READY)
 		return CELLULAR_RETURN_ERROR_DEVICE_NOT_READY;
 	if(sara_g350_locked)
@@ -74,7 +76,37 @@ int sara_g350_send_sms(char* number, char* buffer){
 	strcat(local_buffer, "\"\r");
 	strcat(local_buffer, buffer);
 	strcat(local_buffer, "\032"); //<Ctrl-Z>
-	at_serial_send_command(atserial, local_buffer, "+CMGS:", &send_result, 1, 300);
+	return_result = at_serial_send_command(atserial, local_buffer, "+CMGS:", &index, 1, 300);
+
+	free(local_buffer);
+
+	sara_g350_locked = 0;
+	return return_result;
+}
+
+int sara_g350_write_sms(char* number, int16_t* index, char* buffer){
+	//make sure no one else is using and device ready
+	if(atserial == NULL || atserial->state != AT_SERIAL_READY)
+		return CELLULAR_RETURN_ERROR_DEVICE_NOT_READY;
+	if(sara_g350_locked)
+		return CELLULAR_RETURN_BUSY;
+	sara_g350_locked = 1;
+
+	if(number == NULL || buffer == NULL || index == NULL)
+		return CELLULAR_RETURN_BAD_ARGUMENTS;
+
+	//allocate memory
+	char* local_buffer = (char*)malloc(sizeof(char)*(strlen(buffer)+12+strlen(number)));
+	if(local_buffer == NULL)
+		return CELLULAR_RETURN_ERROR_MEMORY;
+
+	at_serial_send_command(atserial, "AT+CMGF=1", "", NULL, 0, 0);
+	strcpy(local_buffer, "AT+CMGW=\"");
+	strcat(local_buffer, number);
+	strcat(local_buffer, "\"\r");
+	strcat(local_buffer, buffer);
+	strcat(local_buffer, "\032"); //<Ctrl-Z>
+	at_serial_send_command(atserial, local_buffer, "+CMGW:", index, 1, 300);
 
 	free(local_buffer);
 
